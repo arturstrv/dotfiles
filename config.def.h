@@ -84,6 +84,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY,			XK_n,spawn,SHCMD("qutebrowser") },	
+	{ MODKEY|ShiftMask, XK_Up, spawn, SHCMD("exec xdotool mousemove_relative -- 0 -15") },
+ 	{ MODKEY|ShiftMask, XK_Down, spawn, SHCMD("exec xdotool mousemove_relative 0 15") },
+	{ MODKEY|ShiftMask, XK_Right, spawn, SHCMD("exec xdotool mousemove_relative 15 0") },
+	{ MODKEY|ShiftMask, XK_Left, spawn, SHCMD("exec xdotool mousemove_relative -- -15 0") },
+	{ MODKEY|ShiftMask, XK_v, spawn, SHCMD("exec xdotool click 1") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
